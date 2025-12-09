@@ -35,7 +35,7 @@ struct ContentView: View {
                     .frame(width: 359, height: 188)
             }
         
-            VStack(alignment: .leading) {
+            VStack() {
                 HStack(){
                     VStack() {
                         Text("LIXO COLETADO")
@@ -51,24 +51,41 @@ struct ContentView: View {
                     }
                     .frame(width: 169, height: 79)
                     .background(Color.green)
+                    .cornerRadius(10)
+                    .padding(.top, 30)
                     
-                    VStack {
+                    VStack() {
                         Text("META DIÁRIA")
+                            .foregroundStyle(Color.white)
                             .frame(width: 130, height: 30)
-                                                
-                        Text("50kg")
-                            .font(.system(size: 25))
-                            .frame(width: 100, height: 30)
+                        HStack{
+                            Text("50")
+                                .font(.system(size: 40))
+                                .foregroundStyle(Color.white)
+                            Text("kg")
+                                .foregroundStyle(Color.white)
+                        }
                     }
+                    .frame(width: 169, height: 79)
+                    .background(Color.green)
+                    .cornerRadius(10)
+                    .padding(.top, 30)
                 }
             }
+            ZStack(){
+                Image("Vector")
+                HStack() {
+                    Image("Image 2")
+                        .background(Color.white)
+                        .cornerRadius(20)
                     
-            HStack() {
-                Text("Icone4")
-                
-                Text("RELATAR PROBLEMA")
-                    .frame(maxWidth: .infinity, alignment: .center)
+                    Text("RELATAR PROBLEMA")
+                        .frame(maxWidth: 280, alignment: .center)
+                }
             }
+            .padding(.top, 40)
+            .frame(width: 338)
+            .cornerRadius(10)
         }
         .padding()
     }
